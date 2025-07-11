@@ -239,3 +239,113 @@ ul {
   }
 }
 /* === End Portfolio Mobile Menu (Lesson 26) === */
+
+/* === Begin Styling Portfolio Hero (Lesson 27) === */
+.hero-wrapper {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: none;
+}
+
+.hero-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 65%;
+  background: linear-gradient(120deg, var(--primary) 60%, var(--accent) 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 80%, 0 100%);
+  opacity: 0.15;
+  z-index: 0;
+}
+
+.hero-wrapper::after {
+  content: '';
+  position: absolute;
+  bottom: 40px;
+  left: 8vw;
+  width: 140px;
+  height: 140px;
+  background: var(--primary);
+  border-radius: 50%;
+  filter: blur(40px);
+  opacity: 0.18;
+  z-index: 0;
+}
+
+.hero-container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.hero-container .intro-text {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-foreground);
+  margin-bottom: 1rem;
+}
+
+.hero-container .highlight {
+  color: var(--accent);
+  font-size: 1.5rem;
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.hero-desc {
+  color: var(--secondary-foreground);
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero-cta {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 14px 36px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: background 0.2s, transform 0.2s;
+  margin-bottom: 2rem;
+}
+
+.hero-cta:hover, .hero-cta:focus {
+  background: var(--primary);
+  color: var(--primary-foreground);
+  transform: translateY(-2px) scale(1.04);
+}
+
+@media screen and (min-width: 768px) {
+  .hero-container {
+    max-width: 700px;
+    padding: 0 40px;
+  }
+  .hero-container .intro-text {
+    font-size: 3.2rem;
+  }
+  .hero-desc {
+    font-size: 1.3rem;
+  }
+}
+
+.social {
+  display: flex;
+  gap: 16px;
+}
+/* === End Styling Portfolio Hero (Lesson 27) === */
