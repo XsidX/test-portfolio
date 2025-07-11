@@ -1,0 +1,171 @@
+html {
+  scroll-behavior: smooth;
+}
+
+:root {
+  /* === Custom Color Palette === */
+  --primary: #ff7e5f;
+  --primary-foreground: #ffffff;
+  --secondary: #463a41;
+  --secondary-foreground: #f2e9e4;
+  --accent: #feb47b;
+  --accent-foreground: #2a2024;
+  --background: #2a2024;
+  --background-foreground: #f2e9e4;
+  --muted: #392f35;
+  --muted-foreground: #d7c6bc;
+  --destructive: #e63946;
+  --destructive-foreground: #ffffff;
+  --border: #463a41;
+  --input: #463a41;
+  --ring: #ff7e5f;
+  /* === End Custom Palette === */
+}
+
+body {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  background-color: var(--background);
+  color: var(--background-foreground);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-foreground);
+}
+
+p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--background-foreground);
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--primary);
+  transition: color 200ms;
+}
+
+a:hover, a:focus {
+  color: var(--accent);
+  text-decoration: underline;
+  outline: none;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* === Begin Portfolio Header & Navigation Styles (Lesson 25) === */
+.position-fixed {
+  position: fixed;
+}
+
+.header-container {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  height: 48px;
+  padding: 0 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--secondary);
+}
+
+@media screen and (min-width: 576px) {
+  .header-container {
+    padding: 0 60px;
+    height: 72px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .header-container {
+    padding: 0 90px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .header-container {
+    padding: 0 120px;
+  }
+}
+
+.logo {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo span {
+  display: block;
+  background-color: var(--accent);
+  height: 10px;
+  width: 20px;
+  border-radius: 0 0 15px 15px;
+  transition: all 150ms ease-in-out;
+  animation: spin 1s ease-in-out;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.logo:hover span {
+  background-color: var(--muted);
+}
+
+.nav-wrapper ul {
+  display: flex;
+  gap: 32px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+}
+
+.nav-link {
+  display: none;
+}
+
+.nav-link a {
+  color: var(--secondary-foreground);
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: all 150ms ease-in-out;
+}
+
+.nav-link a:hover, .nav-link a:focus {
+  background-color: var(--muted);
+  color: var(--primary-foreground);
+}
+
+.menu {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: none;
+  }
+  .nav-link {
+    display: block;
+  }
+}
+/* === End Portfolio Header & Navigation Styles (Lesson 25) === */
