@@ -71,7 +71,7 @@ ul {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
+  z-index: 99;
   height: 48px;
   padding: 0 24px;
   display: flex;
@@ -169,3 +169,73 @@ ul {
   }
 }
 /* === End Portfolio Header & Navigation Styles (Lesson 25) === */
+
+/* === Begin Portfolio Mobile Menu (Lesson 26) === */
+
+.display-none {
+  display: none;
+}
+
+#menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+.menu-layer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.menu-layer a {
+  color: var(--secondary-foreground);
+}
+
+.menu-layer button {
+  position: absolute;
+  top: 16px;
+  right: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-layer ul {
+  margin-top: 100px;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.container {
+  margin: 0 24px;
+}
+
+.section-margin-t {
+  margin-top: 100px;
+}
+
+@media screen and (min-width: 576px) {
+  .container {
+    margin: 0 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    margin: 0 90px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    margin: 0 120px;
+  }
+}
+/* === End Portfolio Mobile Menu (Lesson 26) === */
