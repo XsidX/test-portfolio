@@ -1,0 +1,17 @@
+body {
+  background-color: #f1faee;
+}
+
+/* Centering the main heading */
+h1 {
+  color: #004d00;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  border: 10px dashed red; 
+}
+
+p {
+  color: #333;
+  font-size: 1.2em;
+  background-color: aqua;
+}
