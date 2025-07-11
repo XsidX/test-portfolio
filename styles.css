@@ -507,3 +507,78 @@ ul {
   }
 }
 /* === End Styling Portfolio Projects Section (Lesson 28) === */
+
+/* === Begin Styling Portfolio Contact Section (Lesson 29) === */
+.intro-text {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  color: var(--primary-foreground);
+}
+
+.call-to-action {
+  text-transform: uppercase;
+  border: none;
+  background-color: transparent;
+  padding: 16px 0;
+  text-align: center;
+  color: var(--secondary-foreground);
+  font-weight: 500;
+  font-size: 16px;
+  font-family: Poppins, Arial, Helvetica, sans-serif;
+  line-height: 24px;
+}
+
+.about-wrapper {
+  padding-top: 100px;
+  padding-bottom: 200px;
+  position: relative;
+  background: none;
+}
+
+.about-wrapper::before,
+.about-wrapper::after {
+  content: '';
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+.about-container {
+  position: relative;
+  z-index: 1;
+}
+
+.about-container .btn {
+  margin-top: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .about-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 40px;
+  }
+}
+
+.tools-title {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-right: 30px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--primary-foreground);
+  text-transform: capitalize;
+}
+
+@media screen and (min-width: 768px) {
+  .tools-title .title {
+    padding-left: 16px;
+  }
+}
+/* === End Styling Portfolio Contact Section (Lesson 29) === */
